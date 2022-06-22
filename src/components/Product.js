@@ -1,10 +1,9 @@
-import React from "react";
-import styled from "styled-components";
 import {
-  ShoppingCartOutlined,
-  SearchOutlined,
   FavoriteBorderOutlined,
+  SearchOutlined,
+  ShoppingCartOutlined,
 } from "@material-ui/icons";
+import styled from "styled-components";
 
 const Info = styled.div`
   opacity: 0;

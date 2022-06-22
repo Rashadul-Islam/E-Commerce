@@ -1,17 +1,18 @@
-import React from "react";
-import styled from "styled-components";
 import {
   Facebook,
   Instagram,
-  Twitter,
+  MailOutline,
+  Phone,
   Pinterest,
   Room,
-  Phone,
-  MailOutline,
+  Twitter,
 } from "@material-ui/icons";
+import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Left = styled.div`
@@ -46,6 +47,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: "none" })}
 `;
 
 const Title = styled.h3`
@@ -68,6 +70,7 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ backgroundColor: "#fff8f8" })}
 `;
 
 const ContactItem = styled.div`
@@ -112,10 +115,11 @@ const Footer = () => {
           <ListItem>Home</ListItem>
           <ListItem>Cart</ListItem>
           <ListItem>Man Fashion</ListItem>
-          <ListItem>Women Fashion</ListItem>
+          <ListItem>Woman Fashion</ListItem>
           <ListItem>Accessories</ListItem>
           <ListItem>My Account</ListItem>
           <ListItem>Order Tracking</ListItem>
+          <ListItem>Wishlist</ListItem>
           <ListItem>Wishlist</ListItem>
           <ListItem>Terms</ListItem>
         </List>
@@ -123,14 +127,14 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{ marginRight: "10px" }} /> Shop No: 36, Floor: 2nd,
-          Jamuna Future Park
+          <Room style={{ marginRight: "10px" }} /> Shop: 36, Floor: 2, Jamuna
+          Future Park, Dhaka
         </ContactItem>
         <ContactItem>
           <Phone style={{ marginRight: "10px" }} /> +8801780788117
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{ marginRight: "10px" }} /> contact@rashadul.dev
+          <MailOutline style={{ marginRight: "10px" }} /> contact@rashed.dev
         </ContactItem>
         <Payment src="https://www.nicepng.com/png/full/83-836237_credit-cards-logo-png-png-free-download-metodos.png" />
       </Right>
